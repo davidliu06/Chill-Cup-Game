@@ -164,7 +164,7 @@
     btnStart.disabled = true;
 
     const pickedCorrectly = currentCup.id === state.ballCupId;
-    const tableNeedsToCheat = state.player === 1 && pickedCorrectly && !state.catHelpActive;
+    const tableNeedsToCheat = state.player === 1 && state.house === 0 && pickedCorrectly && !state.catHelpActive;
 
     if (tableNeedsToCheat) {
       await cheatThePlayer(currentCup);
