@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find the Ball</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-container">
+    <button id="musicToggle" class="music-toggle" type="button" aria-label="Play music" aria-pressed="false">
+      <span class="speaker-icon" aria-hidden="true"></span>
+      <span class="sound-wave wave-1" aria-hidden="true"></span>
+      <span class="sound-wave wave-2" aria-hidden="true"></span>
+    </button>
+
+    <section class="scoreboard" aria-label="Match score">
+      <div>
+        <span class="score-label">You</span>
+        <strong id="playerScore">0</strong>
+      </div>
+      <div class="round-marker">
+        <span>Best of 3</span>
+        <strong id="roundNumber">Round 1</strong>
+      </div>
+      <div>
+        <span class="score-label">Table</span>
+        <strong id="houseScore">0</strong>
+      </div>
+    </section>
+
+    <p id="instructions" class="instructions">Find the ball</p>
+
+    <section class="shell-game" aria-label="Shell game table">
+      <div class="cups-box" id="cupsBox">
+        <div id="cup1" class="cup cup-1" role="button" tabindex="0" aria-label="Cup 1"></div>
+        <div id="cup2" class="cup cup-2" role="button" tabindex="0" aria-label="Cup 2"></div>
+        <div id="cup3" class="cup cup-3" role="button" tabindex="0" aria-label="Cup 3"></div>
+        <div id="ball" class="hidden" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button id="btnStart" type="button">START</button>
+      <button id="btnReset" type="button">RESET</button>
+    </div>
+
+    <button id="floorBall" class="floor-ball" type="button" aria-label="Tiny ball by the plant"></button>
+    <button id="catAssist" class="cat-assist" type="button" aria-label="Ask the cat for help" disabled></button>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
